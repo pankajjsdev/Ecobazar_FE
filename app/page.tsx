@@ -7,6 +7,8 @@ import FeatureCard from "@/components/_ui/Feature/FeatureCard";
 import Testimonial from "@/components/_ui/testimonial";
 import BlogCard from "@/components/_ui/blog/BlogCard";
 
+import Header from "@/components/_ui/header/index";
+
 const product = [
   {
     "product_id": "78901",
@@ -93,13 +95,13 @@ const imagesData = [
     "heading3": "Join Us Today"
   },
   {
-    "image":"/images/carousel/bg1.png",
+    "image": "/images/carousel/bg1.png",
     "heading1": "Discover New Horizons",
     "heading2": "Adventure Awaits",
     "heading3": "Explore the World"
   },
   {
-    "image":"/images/carousel/bg1.png",
+    "image": "/images/carousel/bg1.png",
     "heading1": "Innovative Solutions",
     "heading2": "Modern Technology",
     "heading3": "Future-Ready"
@@ -121,28 +123,28 @@ const imagesData = [
 
 const FeatureData = [
   {
-    name:'Free Shipping',
-    subHeading:'Free shipping with discount'
+    name: 'Free Shipping',
+    subHeading: 'Free shipping with discount'
   },
   {
-    name:'Great Support 24/7',
-    subHeading:'Instant access to Contact'
+    name: 'Great Support 24/7',
+    subHeading: 'Instant access to Contact'
   },
   {
-    name:'100% Sucure Payment',
-    subHeading:'We ensure your money is save'
+    name: '100% Sucure Payment',
+    subHeading: 'We ensure your money is save'
   },
   {
-    name:'Money-Back Guarantee',
-    subHeading:'30 days money-backt'
+    name: 'Money-Back Guarantee',
+    subHeading: '30 days money-backt'
   }
 ]
 
 
 export default function Home() {
   return (
-    <main className="grid grid-cols-3">
-
+    <main>
+      <Header />
     </main>
   );
 }
