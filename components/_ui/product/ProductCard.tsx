@@ -93,6 +93,7 @@ function ProductCard({ product, productCardType = 1, addToWishlist, addToCart, o
                 {/* {product?.saleOff && <Badge variant="destructive" className="bg-secondary-danger text-white rounded top-3">sale 50%</Badge>} */}
                 {/* {product?.status && <Badge variant="secondary" className="">sale 50%</Badge>} */}
                 {/* {<Badge variant="secondary" className="bg-secondary-info text-white rounded top-3">Best Sale</Badge>} */}
+                {/* Out of Stock */}
 
             </div>
             <CardContent className={`relative ${productCardType == 2 ? 'flex' : ''}`}>

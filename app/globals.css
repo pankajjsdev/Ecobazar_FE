@@ -1,4 +1,23 @@
 @tailwind base;
   @tailwind components;
   @tailwind utilities;
+
+
+
+  .text-outline{
+    -webkit-text-stroke: 1px #ffffff;
+  }
+  
+  .text-outline-hover{
+    -webkit-text-stroke: 1px #00ff99;
+  }
+  
+  
+  .triangle {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid #F2F2F2; /* Replace with your desired color */
+  }
   
