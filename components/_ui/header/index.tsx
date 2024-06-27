@@ -9,15 +9,16 @@ import { BsHandbag } from "react-icons/bs";
 import { NavigationMenuDemo } from "./Desktop";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Mobile from "./Mobile";
 
 
 
 function index() {
     return (
         <header className="">
-            <div className="">
+            <div className="hidden xl:flex xl:flex-col">
                 {/* header 1 */}
-                <div className="bg-green-green.5 text-green-green7 py-[12px]">
+                <div className="bg-green-green.5 text-green-green7 py-[13px]">
                     <div className="container flex justify-between ">
 
                         <div className="flex items-center"><CiLocationOn size={20} /><span className="text-gray-gray6 text-xs">Store Location: Lincoln- 344, Illinois, Chicago, USA</span></div>
@@ -33,7 +34,7 @@ function index() {
                     </div>
                 </div>
                 {/* header 2 */}
-                <div className="py-2">
+                <div className="py-[20px]">
                     <div className="container flex justify-between ">
                         <Image
                             src={"/images/logo/logo.svg"}
@@ -63,10 +64,26 @@ function index() {
                     </div>
                 </div>
                 {/* header 3 */}
-                <div className="shadow">
+                <div className="shadow py-[13px]">
                     <div className="container  flex justify-between items-center">
                         <NavigationMenuDemo />
                         <span>(219) 555-0114</span>
+                    </div>
+                </div>
+            </div>
+
+            <div className="xl:hidden">
+                <div className="bg-green-green.5 text-green-green7 py-[12px]">
+                    <div className="flex justify-between px-3">
+
+                        <div className="flex items-center"><CiLocationOn size={20} /><span className="text-gray-gray6 text-xs">Store Location: Lincoln- 344, Illinois, Chicago, USA</span></div>
+                    </div>
+                </div>
+                <div className="flex items-center justify-between pr-3 py-3 shadow">
+                    <Mobile />
+                    <div className="flex">
+                        <BsHandbag size={25} />
+
                     </div>
                 </div>
             </div>

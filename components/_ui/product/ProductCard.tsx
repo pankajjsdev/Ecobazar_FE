@@ -22,9 +22,9 @@ type Product = {
     specifications: Specifications;
     variants: Variant[];
     reviews: Review[];
-    seller: Seller;
-    shipping: Shipping;
-    tags: string[];
+    seller?: Seller;
+    shipping?: Shipping;
+    tags?: string[];
     saleOff?: string;
     salePrice?: number;
     regularPrice?: number;
@@ -103,11 +103,8 @@ function ProductCard({ product, productCardType = 1, addToWishlist, addToCart, o
                     alt={"product1"}
                     width={300}
                     height={300}
-                    className={`${productCardType == 2 ? 'w-[100px] h-[100px]' : ''} transform scale-100 group-hover:scale-105 transition-all duration-500`}
+                    className={`${productCardType == 2 ? 'w-[100px] h-[100px]' : 'transform scale-100 group-hover:scale-105'} w-full  transition-all duration-500`}
                 />
-
-
-
                 <div className={`${productCardType == 2 ? 'px-3' : ''}`}>
                     <h1 className="text-sm text-gray-gray7 group-hover:text-primary-hard mt-1 mb-2">{product?.name}</h1>
 

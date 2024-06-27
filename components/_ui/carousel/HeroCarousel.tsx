@@ -11,6 +11,7 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 type Props = {
     imagesData: any;
@@ -21,35 +22,66 @@ export function HeroCarousel({ imagesData }: Props) {
     const plugin = React.useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
 
     return (
-        <Carousel
-            plugins={[plugin.current]}
-            onMouseEnter={() => plugin.current.stop()}
-            onMouseLeave={() => plugin.current.reset()}
-        >
-            <CarouselContent className="w-full h-[300px]">
-                {imagesData?.map((payload: any, index: React.Key | null | undefined) => (
-                    <CarouselItem key={index} className="w-full">
-                        <div className="w-full h-[300px]" style={{
-                            background: `url(${payload.image})`
-                        }}>
-                            <div className="">
-                                <h1 >{payload?.heading1}</h1>
-                            </div>
-                        </div>
-                        {/* <Image
-                            className="w-full h-[60%] md:h-full lg:h-full xl:full"
-                                src={payload.image}
-                                alt="img"
-                                width={700}
-                                height={400}
-                                objectFit="contain"
-                            /> */}
+        <div className="container my-3">
+            <div className="grid grid-cols-1  md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-3">
+                <div className="md:col-span-2 relative">
+                    <Image
+                        src={"/images/carousel/bg5.png"}
+                        width={300}
+                        height={200}
+                        alt=""
+                        className="w-full h-full"
+                    />
+                    {/* <div className="absolute top-[40%]">
+                        <h1 className="text-[48px] text-white">Fresh & Healthy
+                        Organic Food</h1>
+                        <p>Sale up to
+                        30% OFF</p>
+                        <p>Free shipping on all your order.</p>
+                        <Button>Shop now</Button>
+                    </div> */}
+                   
+                </div>
+                <div className="space-y-2">
+                    <Image
+                        src={"/images/carousel/bg6.png"}
+                        width={300}
+                        height={200}
+                        alt=""
+                        className="w-full"
+                    />
+                     <Image
+                        src={"/images/carousel/bg7.png"}
+                        width={300}
+                        height={200}
+                        alt=""
+                        className="w-full"
+                    />
+                </div>
 
-                    </CarouselItem>
-                ))}
-            </CarouselContent>
-            {/* <CarouselPrevious />
-            <CarouselNext /> */}
-        </Carousel>
+            </div>
+        </div>
+        // <Carousel
+        //     plugins={[plugin.current]}
+        //     onMouseEnter={() => plugin.current.stop()}
+        //     onMouseLeave={() => plugin.current.reset()}
+        // >
+        //     <CarouselContent className="w-full h-[700px]">
+        //         {imagesData?.map((payload: any, index: React.Key | null | undefined) => (
+        //             <CarouselItem key={index} className="w-full">
+        //                  <div 
+        //         className="w-full h-[700px] bg-cover bg-center" 
+        //         style={{ backgroundImage: `url(${payload.image})` }}
+        //     >
+        //                     <div className="">
+        //                         <h1 >{payload?.heading1}</h1>
+        //                     </div>
+        //                 </div>
+        //             </CarouselItem>
+        //         ))}
+        //     </CarouselContent>
+        //     {/* <CarouselPrevious />
+        //     <CarouselNext /> */}
+        // </Carousel>
     );
 }

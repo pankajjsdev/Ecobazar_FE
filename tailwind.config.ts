@@ -12,11 +12,19 @@ const config = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1rem",
       screens: {
         "2xl": "1400px",
       },
     },
+    // fontSize: {
+    //   'body-xxxl': '24px',
+    //   'body-xxl': '20px',
+    //   'body-xl': '18px',
+    //   'body-lg': '16px',
+    //   'body-md': '14px',
+    //   'body-sm': '12px',
+    // },
     colors: {
       primary: {
         primary: "#00B207",
