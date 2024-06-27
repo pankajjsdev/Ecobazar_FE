@@ -48,11 +48,17 @@ const feedbacks = [
 
 function Testimonial() {
     return (
-        <section >
-            <Carousel className="w-full">
+        <section className="bg-green-green.5 " >
+          <div className="container  pt-10">
+            <div>
+            <h1 className="text-[40px] font-semibold">Client Testimonial</h1>
+           
+            </div>
+         
+            <Carousel className="w-full relative">
                 <CarouselContent className="-ml-1">
                     {feedbacks.map((feedback, index) => (
-                        <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3 h-[450px] ">
+                        <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3 h-[350px] ">
                             <div className="p-1 w-[400px">
                                 <div className="flex flex-col items-center justify-center">
                                     <div className="bg-white group p-4 rounded-md overflow-hidden transition-all duration-1000 ease-in-out">
@@ -81,9 +87,12 @@ function Testimonial() {
                         </CarouselItem>
                     ))}
                 </CarouselContent>
-                <CarouselPrevious className="top-10 hidden md:block lg:block" />
-                <CarouselNext className="top-10 hidden md:block lg:block"  />
+              <div className="absolute -top-8 right-16">
+              <CarouselPrevious className=" hidden md:block lg:block bg-primary-primary text-white  " />
+              <CarouselNext className=" hidden md:block lg:block bg-primary-primary text-white "  />
+              </div>
             </Carousel>
+          </div>
         </section>
     );
 }

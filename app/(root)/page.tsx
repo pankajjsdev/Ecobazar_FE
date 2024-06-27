@@ -5,9 +5,11 @@ import ProductList from "@/components/_ui/product/index";
 import { HeroCarousel, } from "@/components/_ui/carousel/HeroCarousel";
 import FeatureCard from "@/components/_ui/Feature/FeatureCard";
 import Testimonial from "@/components/_ui/testimonial";
-import BlogCard from "@/components/_ui/blog/BlogCard";
 
-import Header from "@/components/_ui/header/index";
+
+import Ads from "@/components/_ui/ads/index";
+import BlogSection from "@/components/_ui/blog/index";
+
 
 
 
@@ -50,10 +52,13 @@ const imagesData = [
 export default function Home() {
     return (
         <main>
-            <Header />
+          
             <HeroCarousel imagesData={imagesData} />
             <FeatureCard />
             <ProductList />
+            <Ads/>
+            <Testimonial/>
+            <BlogSection/>
         </main>
     );
 }

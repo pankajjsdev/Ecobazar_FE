@@ -41,7 +41,7 @@ function BlogCard({ title, subHeading, image, date, url }: Props) {
                     </div>
                 </CardContent>
                 <CardFooter className="pt-0">
-                    <Link href={url || "#"} className="mx-1 text-primary-primary">Read More <BsArrowRight className="text-primary-primary font-semibold" /> </Link>
+                    <Link href={url || "#"} className="mx-1 text-primary-primary flex items-center justify-center">Read More <BsArrowRight className="text-primary-primary font-semibold mx-2" /> </Link>
                 </CardFooter>
             </Card>
 
