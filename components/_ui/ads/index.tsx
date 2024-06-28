@@ -4,7 +4,7 @@ import { BsArrowRight } from "react-icons/bs";
 
 function index() {
     return (
-        <section className="container my-3">
+        <section className="container my-6">
             <div className="grid grid-cols-1 xl:grid-cols-3 gap-3 text-white text-center">
                 <div>
                     <div className="relative">

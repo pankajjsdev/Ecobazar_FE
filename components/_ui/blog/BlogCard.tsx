@@ -20,14 +20,16 @@ type Props = {
 function BlogCard({ title, subHeading, image, date, url }: Props) {
     return (
         <div>
-            <Card className="w-[424px]">
-                <CardContent className="w-[424px] flex flex-col items-center pb-0 ">
+            <div className="w-[424px] bg-white shadow-lg p-3 border-2 border-white flex flex-col items-center rounded-lg ">
+                <div className="w-[424px] flex flex-col items-center pb-0 ">
                     <div className="relative">
                         <Image
                             src={image}
                             alt="blog1"
                             width={376}
                             height={276}
+                            // className="w-full"
+                            className="transform scale-80 group-hover:scale-100 transition-all duration-500"   
 
                         />
                         <div className="absolute bg-white bottom-8 left-4 px-3 py-1 rounded opacity-80 text-center">
@@ -39,11 +41,11 @@ function BlogCard({ title, subHeading, image, date, url }: Props) {
                         <p className="text-[18px]">{title}</p>
                         <p className="text-green-green5 text-[12px]">{subHeading}</p>
                     </div>
-                </CardContent>
-                <CardFooter className="pt-0">
-                    <Link href={url || "#"} className="mx-1 text-primary-primary flex items-center justify-center">Read More <BsArrowRight className="text-primary-primary font-semibold mx-2" /> </Link>
-                </CardFooter>
-            </Card>
+                </div>
+                <div className="pt-0">
+                    <Link href={url || "#"} className="mx-1 text-primary-primary flex items-center justify-start">Read More <BsArrowRight className="text-primary-primary font-semibold mx-2" /> </Link>
+                </div>
+            </div>
 
         </div>
     )

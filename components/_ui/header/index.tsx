@@ -1,7 +1,7 @@
 
 import { Separator } from "@/components/ui/separator"
 
-import { CiLocationOn, CiHeart } from "react-icons/ci";
+import { CiLocationOn, CiHeart, CiPhone } from "react-icons/ci";
 
 import { Input } from "@/components/ui/input"
 
@@ -67,7 +67,7 @@ function index() {
                 <div className="shadow py-[13px]">
                     <div className="container  flex justify-between items-center">
                         <NavigationMenuDemo />
-                        <span>(219) 555-0114</span>
+                        <span className="flex items-center"><CiPhone size={25} className="mx-1"/> (219) 555-0114</span>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import ProductCard from './ProductCard'
+
 import Image from 'next/image';
 
 const products = [
@@ -306,7 +307,7 @@ const product2 = products.slice(0, 3)
 function index() {
   return (
     <section className='container my-3 '>
-      <h1 className='text-[32px] font-semibold'>Products</h1>
+      <h1 className='text-[32px] font-semibold'>Featured Products</h1>
       <div className='grid  grid-cols-1 xl:grid-cols-5 gap-3'>
         {
           products?.map((product, index) => {

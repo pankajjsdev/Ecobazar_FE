@@ -22,26 +22,26 @@ const data = [
         "date": "2024-06-20",
         "url": "https://example.com/blog/blockchain-guide"
     },
-    {
-        "title": "The Rise of Electric Vehicles",
-        "subHeading": "How EVs are changing the automotive industry",
-        "image": "/images/blog/blog1.png",
-        "date": "2024-06-15",
-        "url": "https://example.com/blog/electric-vehicles"
-    },
-    {
-        "title": "Healthy Eating: Tips and Tricks",
-        "subHeading": "Simple ways to maintain a balanced diet",
-        "image": "/images/blog/blog1.png",
-        "date": "2024-06-10",
-        "url": "https://example.com/blog/healthy-eating"
-    }
+    // {
+    //     "title": "The Rise of Electric Vehicles",
+    //     "subHeading": "How EVs are changing the automotive industry",
+    //     "image": "/images/blog/blog1.png",
+    //     "date": "2024-06-15",
+    //     "url": "https://example.com/blog/electric-vehicles"
+    // },
+    // {
+    //     "title": "Healthy Eating: Tips and Tricks",
+    //     "subHeading": "Simple ways to maintain a balanced diet",
+    //     "image": "/images/blog/blog1.png",
+    //     "date": "2024-06-10",
+    //     "url": "https://example.com/blog/healthy-eating"
+    // }
 ]
 
 function index() {
     return (
         <section className='container my-3'>
-             <h1 className='text-[32px] font-semibold'>Blogs</h1>
+             <h1 className='text-[32px] font-semibold'>Latest News</h1>
            <div className='grid grid-cols-3 gap-3 my-3'>
            {
                 data?.map((blog, index) => {
