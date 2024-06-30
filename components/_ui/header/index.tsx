@@ -10,6 +10,7 @@ import { NavigationMenuDemo } from "./Desktop";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Mobile from "./Mobile";
+import Link from "next/link";
 
 
 
@@ -50,7 +51,7 @@ function index() {
                         </div>
 
                         <div className="flex">
-                            <CiHeart size={30} />
+                          <Link href="/wishlist" >  <CiHeart size={30} /></Link>
 
                             <div className="flex">
                                 |    <BsHandbag size={25} />
