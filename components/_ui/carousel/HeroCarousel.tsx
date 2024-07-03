@@ -28,10 +28,10 @@ export function HeroCarousel({ imagesData }: Props) {
             <CarouselContent>
                 {imagesData?.map((payload: any, index: React.Key) => (
                     <CarouselItem key={index}>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 items-center gap-3 container">
-                            <div className="order-2 lg:order-none">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 items-center gap-3 px-6">
+                            <div className="order-2 lg:order-none flex flex-col items-center lg:items-start">
                                 <span className="text-primary-primary text-[14px]">Welcome to shopery</span>
-                                <p className="text-gray-gray9 text-4xl lg:text-7xl w-[396px] lg:w-[596px] font-semibold py-2 lg:py-3">
+                                <p className="text-gray-gray9 text-4xl lg:text-7xl w-[396px] lg:w-[596px] font-semibold py-2 lg:py-3 text-center lg:text-left">
                                     Fresh & Healthy Organic Food
                                 </p>
                                 <p className="space-x-2 text-[28px]">
