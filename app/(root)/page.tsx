@@ -11,39 +11,24 @@ import Ads from "@/components/_ui/ads/index";
 import BlogSection from "@/components/_ui/blog/index";
 
 
-
-
-
 const imagesData = [
     {
-        "image": "/images/carousel/bg1.png",
+        "image": "/images/carousel/bg8.png",
         "heading1": "Welcome to Our Service",
         "heading2": "Quality and Trust",
         "heading3": "Join Us Today"
     },
     {
-        "image": "/images/carousel/bg1.png",
+        "image": "/images/carousel/bg9.png",
         "heading1": "Discover New Horizons",
         "heading2": "Adventure Awaits",
         "heading3": "Explore the World"
     },
     {
-        "image": "/images/carousel/bg1.png",
+        "image": "/images/carousel/bg10.png",
         "heading1": "Innovative Solutions",
         "heading2": "Modern Technology",
         "heading3": "Future-Ready"
-    },
-    {
-        "image": "/images/carousel/bg1.png",
-        "heading1": "Stay Connected",
-        "heading2": "Anytime, Anywhere",
-        "heading3": "Seamless Experience"
-    },
-    {
-        "image": "/images/carousel/bg1.png",
-        "heading1": "Healthy Living",
-        "heading2": "Wellness and Fitness",
-        "heading3": "Join the Movement"
     }
 ]
 

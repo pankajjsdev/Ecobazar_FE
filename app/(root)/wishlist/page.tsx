@@ -15,7 +15,7 @@ function page() {
     return (
         <div className="container my-3">
             <h1 className="text-[32px] text-center my-10">My Wishlist</h1>
-            <Table className="border border-gray-gray1 my-10">
+            <Table className="rounded-lg border border-gray-gray1  my-10">
                 {/* <TableCaption>A list of your recent invoices.</TableCaption> */}
                 <TableHeader>
                     <TableRow className="border-gray-gray1">

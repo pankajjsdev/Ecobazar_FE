@@ -20,16 +20,16 @@ type Props = {
 function BlogCard({ title, subHeading, image, date, url }: Props) {
     return (
         <div>
-            <div className="w-[424px] bg-white shadow-lg p-3 border-2 border-white flex flex-col items-center rounded-lg ">
+            {/* <div className="w-[424px] bg-white shadow-lg p-3 border-2 border-white flex flex-col items-center rounded-lg ">
                 <div className="w-[424px] flex flex-col items-center pb-0 ">
-                    <div className="relative">
+                    <div className="relative overflow-hidden">
                         <Image
                             src={image}
                             alt="blog1"
                             width={376}
                             height={276}
                             // className="w-full"
-                            className="transform scale-80 group-hover:scale-100 transition-all duration-500"   
+                            className="transform scale-100 hover:scale-110 transition-all duration-500 cursor-pointer"   
 
                         />
                         <div className="absolute bg-white bottom-8 left-4 px-3 py-1 rounded opacity-80 text-center">
@@ -45,7 +45,7 @@ function BlogCard({ title, subHeading, image, date, url }: Props) {
                 <div className="pt-0">
                     <Link href={url || "#"} className="mx-1 text-primary-primary flex items-center justify-start">Read More <BsArrowRight className="text-primary-primary font-semibold mx-2" /> </Link>
                 </div>
-            </div>
+            </div> */}
 
         </div>
     )
