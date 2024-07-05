@@ -22,8 +22,13 @@ export function HeroCarousel({ imagesData }: Props) {
     return (
         <Carousel
             plugins={[plugin.current]}
+            opts={{
+                align: "start",
+                loop: true,
+              }}
             onMouseEnter={() => plugin.current.stop()}
             onMouseLeave={() => plugin.current.reset()}
+            className="m-6"
         >
             <CarouselContent>
                 {imagesData?.map((payload: any, index: React.Key) => (
