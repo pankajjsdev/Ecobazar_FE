@@ -46,9 +46,7 @@ export function HeroCarousel({ imagesData }: Props) {
                                 <p className="text-sm text-gray-gray5 py-2 lg:py-3">
                                     Free shipping on all your order. we deliver, you enjoy
                                 </p>
-                                <p className="text-sm text-gray-gray5 py-2 lg:py-3">
-                                    Free shipping on all your order. we deliver, you enjoy
-                                </p>
+                               
                                 <Button className="text-white bg-primary-primary rounded-3xl my-6 hover:bg-primary-hard">
                                     Shop now <BsArrowRight size={20} className="text-white mx-1" />
                                 </Button>

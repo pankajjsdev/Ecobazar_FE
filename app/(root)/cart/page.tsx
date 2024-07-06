@@ -21,10 +21,15 @@ import {
     TableRow,
 } from "@/components/ui/table"
 import Image from "next/image"
+import Breadcumb from "@/components/_ui/breadcumb/Breadcumb";
 
 
 function page() {
     return (
+        <>
+         <Breadcumb
+          currentPage="Shopping cart"
+        />
         <div className="container py-6">
             <h1 className="text-center font-semibold text-3xl py-6">My Shopping Cart</h1>
             <section className="grid grid-cols-4 gap-3">
@@ -127,6 +132,7 @@ function page() {
                 </div>
             </section>
         </div>
+        </>
     )
 }
 

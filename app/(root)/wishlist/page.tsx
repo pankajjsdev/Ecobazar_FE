@@ -21,10 +21,15 @@ import {
     TableRow,
 } from "@/components/ui/table"
 import Image from "next/image"
+import Breadcumb from "@/components/_ui/breadcumb/Breadcumb";
 
 
 function page() {
     return (
+        <>
+         <Breadcumb
+          currentPage="Wishlist"
+        />
         <div className="container my-8">
             <h1 className="text-center font-semibold text-3xl py-6">My Wishlist</h1>
             <section className="">
@@ -83,6 +88,7 @@ function page() {
                 </div>
             </section>
         </div>
+        </>
     )
 }
 

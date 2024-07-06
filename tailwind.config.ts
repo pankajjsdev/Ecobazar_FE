@@ -67,6 +67,9 @@ const config = {
 
     },
     extend: {
+      backgroundImage: {
+        'breadcrumb-gradient': "linear-gradient(90.02deg, rgba(0, 0, 0, 0.7) 0.03%, rgba(0, 0, 0, 0) 91.31%), url('/images/common/breadcumb.png')"
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
