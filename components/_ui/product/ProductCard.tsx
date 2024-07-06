@@ -9,6 +9,7 @@ import Rating from "./Rating";
 import ToolTip from "../common/ToolTip";
 import { Button } from "@/components/ui/button";
 import { ChevronRightIcon } from "lucide-react";
+import Link from "next/link";
 
 type Product = {
     product_id: string;
@@ -123,14 +124,9 @@ function ProductCard({ product, productCardType = 1, addToWishlist, addToCart, o
                                 <BsHeart className="text-xl" title="add to wishlist" />
                             </Button>
                             <Button variant="outline" size="icon" className="bg-white shadow rounded-full">
-                                <BsEye className="text-xl" title="view product" />
+                                <Link href={`/product/${product?.name}`}>                                <BsEye className="text-xl" title="view product" /></Link>
                             </Button>
-
-
-
                         </div>
-
-
                     </div>
                     <div className={`${productCardType == 2 ? 'group-hover:hidden' : ''}`}>
                         <Rating />

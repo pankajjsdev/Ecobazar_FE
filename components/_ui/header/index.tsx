@@ -37,13 +37,15 @@ function index() {
                 {/* header 2 */}
                 <div className="py-[20px]">
                     <div className="container flex justify-between ">
-                        <Image
-                            src={"/images/logo/logo.svg"}
-                            alt="logo"
-                            width={200}
-                            height={150}
+                        <Link href="/">
+                            <Image
+                                src={"/images/logo/logo.svg"}
+                                alt="logo"
+                                width={200}
+                                height={150}
 
-                        />
+                            />
+                        </Link>
 
                         <div className="flex w-full max-w-sm items-center">
                             <Input type="email" placeholder="Email" className="rounded-none focus:border-none" />
@@ -51,15 +53,15 @@ function index() {
                         </div>
 
                         <div className="flex">
-                          <Link href="/wishlist" >  <CiHeart size={30} /></Link>
+                            <Link href="/wishlist" >  <CiHeart size={30} /></Link>
 
-                            <div className="flex">
+                            <Link href="/cart" className="flex">
                                 |    <BsHandbag size={25} />
                                 <div className="flex flex-col items-center justify-center">
                                     <p className="text-[12px] text-gray-gray7">shoping cart</p>
                                     <span className="text-[14px]">$57.0</span>
                                 </div>
-                            </div>
+                            </Link>
 
                         </div>
                     </div>
@@ -68,7 +70,7 @@ function index() {
                 <div className="shadow py-[13px]">
                     <div className="container  flex justify-between items-center">
                         <NavigationMenuDemo />
-                        <span className="flex items-center"><CiPhone size={25} className="mx-1"/> (219) 555-0114</span>
+                        <span className="flex items-center"><CiPhone size={25} className="mx-1" /> (219) 555-0114</span>
                     </div>
                 </div>
             </div>
