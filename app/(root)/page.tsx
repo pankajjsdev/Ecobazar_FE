@@ -1,4 +1,3 @@
-'use client'
 
 import { Badge } from "@/components/ui/badge"
 import ProductList from "@/components/_ui/product/index";
