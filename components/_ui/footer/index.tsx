@@ -4,15 +4,7 @@ function index() {
   return (
     <footer className="bg-gray-gray9 text-white py-20">
       <div className="container text-center">
-        <div className="grid grid-cols-5 ">
-          <div className="bg-white flex items-center justify-center rounded-2xl">
-            <Image
-              src={"/images/logo/logo.svg"}
-              alt="logo"
-              width={200}
-              height={150}
-            />
-          </div>
+        <div className="grid grid-cols-2  lg:grid-cols-5">
           <div>
             <h1 className="my-6">My Account</h1>
             <ul className="text-gray-gray4 space-y-3">
@@ -51,6 +43,15 @@ function index() {
               <li>Bread & Bakery</li>
               <li>Beauty & Health</li>
             </ul>
+          </div>
+          <div className="col-span-2 flex flex-col py-6 items-center lg:col-span-1">
+          <Image
+            src={"/images/logo/logo_footer.svg"}
+            alt="logo"
+            width={300}
+            height={200}
+          />
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
         </div>
       </div>
