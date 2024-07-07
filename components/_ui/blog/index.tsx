@@ -42,7 +42,7 @@ function index() {
     return (
         <section className='container my-3'>
              <h1 className='text-[32px] font-semibold'>Latest News</h1>
-           <div className='grid grid-cols-3 gap-3 my-3'>
+           <div className='grid grid-cols-1 lg:grid-cols-3 gap-3 my-3'>
            {
                 data?.map((blog, index) => {
                     return (

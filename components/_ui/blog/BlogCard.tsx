@@ -20,7 +20,7 @@ type Props = {
 function BlogCard({ title, subHeading, image, date, url }: Props) {
     return (
         <div>
-            {/* <div className="w-[424px] bg-white shadow-lg p-3 border-2 border-white flex flex-col items-center rounded-lg ">
+            <div className="w-[424px] bg-white shadow-lg p-3 border-2 border-white flex flex-col items-center rounded-lg ">
                 <div className="w-[424px] flex flex-col items-center pb-0 ">
                     <div className="relative overflow-hidden">
                         <Image
@@ -45,7 +45,7 @@ function BlogCard({ title, subHeading, image, date, url }: Props) {
                 <div className="pt-0">
                     <Link href={url || "#"} className="mx-1 text-primary-primary flex items-center justify-start">Read More <BsArrowRight className="text-primary-primary font-semibold mx-2" /> </Link>
                 </div>
-            </div> */}
+            </div>
 
         </div>
     )

@@ -8,6 +8,7 @@ import Testimonial from "@/components/_ui/testimonial";
 
 import Ads from "@/components/_ui/ads/index";
 import BlogSection from "@/components/_ui/blog/index";
+import SocialIcons from "@/components/_ui/social/SocialIcons";
 
 
 const imagesData = [
@@ -36,7 +37,6 @@ const imagesData = [
 export default function Home() {
     return (
         <main>
-          
             <HeroCarousel imagesData={imagesData} />
             <FeatureCard />
             <ProductList />

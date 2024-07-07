@@ -20,4 +20,9 @@
     border-right: 10px solid transparent;
     border-top: 20px solid #ffffff; /* Replace with your desired color */
   }
+
+
+  :root{
+    /* zoom: 80%; */
+  }
   

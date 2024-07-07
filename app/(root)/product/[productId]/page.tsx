@@ -15,6 +15,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import SocialIcons from "@/components/_ui/social/SocialIcons";
+import QuantityButton from "@/components/_ui/cart/QuantityButton";
+import { Button } from "@/components/ui/button";
 
 
 type Product = {
@@ -448,7 +451,7 @@ function page() {
                     <CarouselNext />
                   </CarouselContent>
 
-                
+
 
                 </Carousel>
 
@@ -467,36 +470,52 @@ function page() {
             </div>
           </div>
           <div>
-            <div className="flex">
+            <div className="flex my-3">
               <h1 className="text-[36px] font-semibold">Chinese Cabbage </h1> <span className="text-primary-hard bg-primary-soft p-2">In Stock</span>
             </div>
-            <div className="flex">
+            <div className="flex my-3">
               <Rating /><span>4 Reviews</span>
             </div>
-            <div>
+            <div className="my-3">
               <span>$48.00</span>
               <span>$17.28</span>
               <span>64% Off</span>
             </div>
 
-            <div>
-              <div> Brand: Logo</div>
-              <div>
-                social icons
+            <div className="flex items-center justify-between my-3">
+              <div className="flex items-center space-x-2"> <span className="text-sm">Brand:</span>  <Image
+                src={"/images/products/brand_logo.png"}
+                alt=""
+                width={60}
+                height={60}
+              // className="hover:border-2 border-b-primary-primary cursor-pointer"
+              /> </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-sm">Share item:</span>
+                <SocialIcons />
               </div>
             </div>
             <div>
-              <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nibh diam, blandit vel consequat nec, ultrices et ipsum. Nulla varius magna a consequat pulvinar. </p>
+              <p className="text-sm text-gray-gray5 my-3">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nibh diam, blandit vel consequat nec, ultrices et ipsum. Nulla varius magna a consequat pulvinar. </p>
             </div>
 
-            <div>btn</div>
+            <div className="grid grid-cols-3 my-3">
+              <div>
+                <QuantityButton/>
+              </div>
+              <div>
+              <Button className="bg-primary-primary text-white rounded-full  text-[16px] font-semibold">
+              Add to Cart</Button>
+              </div>
+              <div></div>
+            </div>
 
-            <div>
+            <div className="my-3">
               <span>Category:</span>
               <span>Vegetables</span>
             </div>
 
-            <div>
+            <div className="my-3">
               <p>Tag:
                 Vegetables
                 Healthy
