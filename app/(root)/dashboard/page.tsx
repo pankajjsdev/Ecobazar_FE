@@ -1,11 +1,12 @@
-
+/* eslint-disable react-hooks/rules-of-hooks */
+'use client'
 import Breadcumb from "@/components/_ui/breadcumb/Breadcumb"
 import Image from "next/image";
 import Link from "next/link"
-import path from "path";
-import { title } from "process";
-import { FaDashcube } from "react-icons/fa";
+import { usePathname } from "next/navigation"
 
+
+import { MdDashboard, MdHistory, MdShoppingCart, MdList , MdSettings, MdLogout } from "react-icons/md";
 import {
     Table,
     TableBody,
@@ -16,6 +17,7 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table"
+
 
 const invoices = [
     {
@@ -66,31 +68,38 @@ const invoices = [
 const menu = [
     {
         title: 'dashboard',
-        path: '',
+        path: '/dashboard',
+        icon: MdDashboard
     },
     {
         title: 'Order History',
-        path: ''
+        path: '',
+        icon: MdHistory
+        
     },
     {
         title: 'Wishlist',
-        path: 'wishlist'
+        path: 'wishlist',
+        icon: MdList
     },
     {
         title: 'Shopping Cart',
-        path: 'wishlist'
+        path: 'wishlist',
+        icon: MdShoppingCart
     },
     {
         title: 'Settings',
-        path: 'wishlist'
+        path: 'wishlist',
+        icon: MdSettings
     },
     {
         title: 'Log-out',
-        path: 'wishlist'
+        path: 'wishlist',
+        icon: MdLogout
     }
 ]
 
-const isActive = true
+
 
 const linksData =
     [
@@ -102,6 +111,7 @@ const linksData =
 
 
 function page() {
+    const pathname =  usePathname()
     return (
         <div>
             <Breadcumb
@@ -118,10 +128,10 @@ function page() {
                                     {
                                         menu?.map((item, index) => {
                                             return (
-                                                <li key={index} className={`py-3   text-gray-gray6 my-3 border-l-2 hover:border-l-primary-primary cursor-pointer hover:bg-gray-gray.5 ${isActive ? 'border-l-primary-primary bg-gray-gray.5 text-gray-gray9' : ''}`}>
+                                                <li key={index} className={`py-3   text-gray-gray6 my-3 border-l-2 hover:border-l-primary-primary cursor-pointer hover:bg-gray-gray.5 ${pathname == item.path ? 'border-l-primary-primary bg-gray-gray.5 text-gray-gray9' : ''}`}>
                                                     <div className="flex items-center mx-3 ">
-                                                        <FaDashcube size={30} />
-                                                        <Link href={item.path} className="mx-2"> {item.title}</Link>
+                                                        <item.icon size={30}  className={pathname == item.path ?  'text-gray-gray9' : 'text-gray-gray2'} />
+                                                        <Link href={item.path} className={`mx-2 ${pathname == item.path ?  'text-gray-gray9' : 'text-gray-gray2'}`} > {item.title}</Link>
                                                     </div>
 
                                                 </li>
@@ -135,8 +145,8 @@ function page() {
                         </div>
                     </div>
                     <div className="col-span-9">
-                        <div className="grid grid-cols-3 gap-6">
-                            <div className="border border-gray-gray1 rounded-lg p-20 flex items-center col-span-2">
+                        <div className="grid grid-cols-2 gap-6">
+                            <div className="border border-gray-gray1 rounded-lg p-20 flex items-center justify-center">
                                 <div className="text-center flex flex-col items-center group ">
                                     <Image
                                         src="/images/user/user.png"
@@ -146,11 +156,11 @@ function page() {
                                     />
                                     <h1 className="text-xl font-medium group-hover:text-primary-hard">Dianne Russell</h1>
                                     <h3 className="text-sm text-gray-gray4">Customer</h3>
-                                    <h6 className="text-primary-primary text-base font-medium">Edit Profile</h6>
+                                    <h6 className="text-primary-primary text-base font-medium my-3">Edit Profile</h6>
                                 </div>
 
                             </div>
-                            <div className="border border-gray-gray1 rounded-lg p-20 col-span-1">
+                            <div className="border border-gray-gray1 rounded-lg p-20">
                                 {/* <div> */}
                                 <h3 className="text-sm text-gray-gray4">BILLING ADDRESS</h3>
                                 <h1 className="text-xl font-medium group-hover:text-primary-hard">Dianne Russell</h1>
@@ -162,6 +172,7 @@ function page() {
                             </div>
                         </div>
                         <div className=" border border-gray-gray.5 rounded-lg my-6 p-6">
+                            <h1 className="my-3 text-lg">Recet Order History</h1>
                             <Table>
                                 {/* <TableCaption>A list of your recent invoices.</TableCaption> */}
                                 <TableHeader>
@@ -182,12 +193,6 @@ function page() {
                                         </TableRow>
                                     ))}
                                 </TableBody>
-                                <TableFooter>
-                                    <TableRow>
-                                        <TableCell colSpan={3}>Total</TableCell>
-                                        <TableCell className="text-right">$2,500.00</TableCell>
-                                    </TableRow>
-                                </TableFooter>
                             </Table>
 
                         </div>
