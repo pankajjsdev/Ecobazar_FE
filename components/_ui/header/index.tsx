@@ -2,6 +2,8 @@
 import { Separator } from "@/components/ui/separator"
 
 import { CiLocationOn, CiHeart, CiPhone } from "react-icons/ci";
+import { FaRegWindowMinimize } from "react-icons/fa";
+
 
 import { Input } from "@/components/ui/input"
 
@@ -11,6 +13,8 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Mobile from "./Mobile";
 import Link from "next/link";
+
+
 
 
 
@@ -52,14 +56,15 @@ function index() {
                             <Button className="bg-primary-primary rounded-none rounded-e text-white" type="submit">Search</Button>
                         </div>
 
-                        <div className="flex">
-                            <Link href="/wishlist" >  <CiHeart size={30} /></Link>
+                        <div className="flex items-center space-x-3">
+                            <Link href="/wishlist" >  <CiHeart size={35} /></Link>
 
-                            <Link href="/cart" className="flex">
-                                |    <BsHandbag size={25} />
+                            <Link href="/cart" className="flex items-center justify-center">
+                            <FaRegWindowMinimize size={30} className="rotate-90 text-gray-gray2 h-8 w-8" />
+                                <BsHandbag size={30} />
                                 <div className="flex flex-col items-center justify-center">
-                                    <p className="text-[12px] text-gray-gray7">shoping cart</p>
-                                    <span className="text-[14px]">$57.0</span>
+                                    {/* <p className="text-[12px] text-gray-gray7">shoping cart</p> */}
+                                    {/* <span className="text-[14px]">$57.0</span> */}
                                 </div>
                             </Link>
 

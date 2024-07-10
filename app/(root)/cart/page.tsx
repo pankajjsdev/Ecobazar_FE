@@ -22,6 +22,7 @@ import {
 } from "@/components/ui/table"
 import Image from "next/image"
 import Breadcumb from "@/components/_ui/breadcumb/Breadcumb";
+import Link from "next/link";
 
 
 function page() {
@@ -122,10 +123,10 @@ function page() {
                                     <h3 className="text-gray-gray7 text-sm">Total:</h3>
                                     <h3 className="text-lg font-semibold">$84.00</h3>
                                 </div>
-                                <div>
+                                <Link href="/checkout">
                                     <Button className="bg-primary-primary text-white rounded-full w-full text-[16px] font-semibold">
                                         Proceed to checkout</Button>
-                                </div>
+                                </Link>
                             </div>
                         </CardContent>
                     </Card>
