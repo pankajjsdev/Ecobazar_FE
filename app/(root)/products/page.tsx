@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/collapsible"
 import { CategoryFilter, PriceFilter, RatingFilter, TagFilter, ProductFilter } from './Filters'
 import { ScrollArea } from "@/components/ui/scroll-area"
+import Breadcumb from '@/components/_ui/breadcumb/Breadcumb'
 const categoryFilter = [
     'Fresh Fruit',
     'Vegetables',
@@ -203,7 +204,10 @@ const products = [
 export default function page() {
     return (
         <div>
-            <div className='container'>
+            <Breadcumb
+                currentPage="Products"
+            />
+            <div className='container mx-auto my-6'>
                 <div className='flex'>
                     <div className='w-[25%] h-[100vh] mr-3 '>
                         <ScrollArea className='h-[100vh] border-none' >

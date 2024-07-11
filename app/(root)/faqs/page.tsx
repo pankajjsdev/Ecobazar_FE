@@ -13,7 +13,6 @@ function page() {
         <>
             <Breadcumb
                 currentPage="Faqs"
-
             />
             <div className="mt-16">
                 <div className="container mx-auto">
